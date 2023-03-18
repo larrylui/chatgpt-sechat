@@ -228,7 +228,7 @@ export default () => {
             class="gen-textarea"
           />
           <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
-            Send
+            發送
           </button>
           <button title="清除" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
             <IconClear />
