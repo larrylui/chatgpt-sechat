@@ -217,8 +217,8 @@ export default () => {
             ref={inputRef!}
             disabled={systemRoleEditing()}
             onKeyDown={handleKeydown}
-            placeholder="Enter something..."
-            autocomplete="off"
+            placeholder="輸入文字"
+            autocomplete="關閉"
             autofocus
             onInput={() => {
               inputRef.style.height = 'auto'
@@ -230,7 +230,7 @@ export default () => {
           <button onClick={handleButtonClick} disabled={systemRoleEditing()} gen-slate-btn>
             Send
           </button>
-          <button title="Clear" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
+          <button title="清除" onClick={clear} disabled={systemRoleEditing()} gen-slate-btn>
             <IconClear />
           </button>
         </div>
