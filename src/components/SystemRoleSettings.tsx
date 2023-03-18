@@ -45,11 +45,11 @@ export default (props: Props) => {
             <IconEnv />
             <span>更換角色/設定 爲他設定身份，什麽都可以</span>
           </div>
-          <p class="my-2 leading-normal text-sm op-50 dark:op-60">Gently instruct the assistant and set the behavior of the assistant.</p>
+          <p class="my-2 leading-normal text-sm op-50 dark:op-60">Secret Chat的强大超乎你想象</p>
           <div>
             <textarea
               ref={systemInputRef!}
-              placeholder="例如:我想让你扮演讲故事的角色。您将想出引人入胜、富有想象力和吸引观众的有趣故事。"
+              placeholder="例如:我想讓你扮演講故事的角色。您將想出引人入胜、富有想象力和吸引觀衆的有趣故事。"
               autocomplete="off"
               autofocus
               rows="3"
