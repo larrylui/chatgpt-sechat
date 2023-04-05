@@ -15,4 +15,90 @@ import Themetoggle from './Themetoggle.astro'
   </div>
   <p mt-1 op-60>元天秘密網搭建基於OpenAI GPT3.5的在綫AI程式</p>
   <p mt-1 op-60>100%ChatGPT 立即暢所欲言</p>
+  <template>
+  <div>
+    <button @click="showModal">Show Modal</button>
+    <div class="modal" :class="{ active: showModalActive }">
+      <div class="modal__content">
+        <h2>{{ modalTitle }}</h2>
+        <p>{{ modalContent }}</p>
+        <div class="modal__buttons">
+          <button class="modal__button" @click="goToLink">Go to Link</button>
+          <button class="modal__button" @click="hideModal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      showModalActive: false,
+      modalTitle: 'Donate to Me',
+      modalContent: 'Please donate to support me!',
+      link: 'https://www.example.com'
+    };
+  },
+  methods: {
+    showModal() {
+      this.showModalActive = true;
+    },
+    hideModal() {
+      this.showModalActive = false;
+    },
+    goToLink() {
+      window.location.href = this.link;
+    }
+  }
+};
+</script>
+
+<style scoped>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal__content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal__content {
+    margin: 20px;
+  }
+}
+</style>
+
 </header>
